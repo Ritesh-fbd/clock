@@ -6,15 +6,18 @@ body {
   background: #1e1e1e;
   color: white;
   font-family: Arial, sans-serif;
+    transition: background 0.5s, color 0.5s;
 }
+
 
 .clock-container {
   text-align: center;
 }
 
 #clock {
-  font-size: 4rem;
-  margin-bottom: 20px;
+    font-size: 80px;
+    text-shadow: 3px 3px 10px whitesmoke; /* Add shadow here */
+    margin-bottom: 20px;
 }
 
 button {
