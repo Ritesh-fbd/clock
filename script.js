@@ -32,15 +32,15 @@ document.getElementById("toggleFormat").addEventListener("click", ()=>{
         is24hour ? "Switch to 12-hour" : "Switch to 24-hour";
     updatedclock();
 });
-
 document.getElementById("togglemode").addEventListener("click", () => {
     isDark = !isDark;
-    if(isDark){
-        document.getElementById("togglemode").textContent="DarkMode";
-    }
-    else{
-        document.getElementById("togglemode").textContent="LightMode";
-    }
+    document.getElementById("togglemode").textContent = isDark ? "DarkMode" : "LightMode";
     document.body.style.background = isDark ? "#1e1e1e" : "white";
     document.body.style.color = isDark ? "white" : "black";
+
+    // Update clock text shadow
+    document.getElementById("clock").style.textShadow = isDark
+        ? "3px 3px 10px white"
+        : "3px 3px 10px black";
 });
+
